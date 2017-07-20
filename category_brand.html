@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>皓歌服饰--品牌分类</title>
+	<!-- 重置样式 -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- 底部 头部 导航 -->
+	<link rel="stylesheet" href="css/common.css">
+	<!-- 分类 -->
+	<link rel="stylesheet" href="css/category.css">
+	<style>
+        .logo-btn-wrap {
+            width: 100%;
+            height: 116px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: url(images/arrow_line.png) no-repeat center;
+        }
+        .logo-btn-text {
+            display: none;
+        }
+        .logo-btn.abled.vipFont {
+            color: #5a5a5a;
+        }
+        .logo-btn.vipFont {
+            font-size: 30px;
+            color: #e5e5e5;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .logo-btn-prev {
+            left: 28px;
+            top: 23px;
+        }
+        .logo-btn-next {
+            right: 28px;
+            bottom: 23px;
+            background-position: -80px center;
+        }
+        .logo-btn {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .vipFont {
+            font-family: vipFont;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+	</style>
+</head>
+<body>
+<div class="head">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li><a href="register.html">注册</a> 
+	            </li> 
+	            <li><a href="login.html">登录</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix">
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"><em class=""></em>购物车</a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>			
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>		 	
+	        <div class="search fr">
+	            <div class="search_box clearfix" style="position: relative;">
+	                <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+	            	<ul name="" id="ul" style="">
+		            	<li value="" class="li active" style="line-height: 30px;">商品</li>
+		            	<li value="" class="li" style="line-height: 30px;">品牌</li>
+	                </ul>
+	                <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+	                <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+	            </div>
+	        </div>		 
+	    </div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="bgColor" id="nav">
+    <div class="inner comWidth">
+    	<ul class="clearfix">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="preSale.html">预售商品</a></li>
+			<li><a href="women_index.html">女装</a></li>
+			<li><a href="men_index.html">男士</a></li>
+			<li><a href="bag_index.html">箱包</a></li>
+			<li class=""><a href="pei_index.html">配饰</a></li>
+			<li><a href="personalCenter.html">我的皓歌</a></li>
+			<li class="nav-category active"><a href="category_goods.html" class="main-nav-atag current"><img class="link-front-icon J-link-front-icon" src="images/category.png">分类</a></li>
+		</ul>
+    </div>
+</div>	
+<div class="g-nav comWidth">
+    <div id="top-nav-wrap" class="top-nav-wrap">
+        <div class="top-nav-inner">
+            <div class="top-nav-main">
+        		<div class="top-nav-item">
+            		<a class="top-nav-link" href="category_goods.html">商品分类</a>
+        		</div>
+        		<span class="top-nav-divide">|</span>
+		        <div class="top-nav-item curr">
+		            <a class="top-nav-link" href="category_brand.html">品牌分类</a>
+		        </div>
+    		</div>
+        </div>
+    </div>
+</div>
+<!-- 品牌分类 -->
+<div id="search_letter" class="comWidth">
+	<ul class="letter_list clearfix" style="display: inline-block;">
+		<li class="active">A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+		<li>E</li>
+		<li>F</li>
+		<li>G</li>
+		<li>H</li>
+		<li>I</li>
+		<li>J</li>
+		<li>K</li>
+		<li>L</li>
+		<li>M</li>
+		<li>N</li>
+		<li>O</li>
+		<li>P</li>
+		<li>Q</li>
+		<li>R</li>
+		<li>S</li>
+		<li>T</li>
+		<li>U</li>
+		<li>V</li>
+		<li>W</li>
+		<li>X</li>
+		<li>Y</li>
+		<li>Z</li>
+	</ul>
+</div>
+<div class="brand-category comWidth">
+    <div class="wrap-w">
+        <div class="brand-enter-wrap wrap-w clearfix">  
+            <div class="brand-enter-right">
+                <div class="brand-logo-list-wrap">
+                    <ul id="brandLogoList" class="brand-logo-list clearfix">
+    					<li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand1.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand2.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand3.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand4.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand5.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand6.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand7.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand3.jpg"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand9.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand10.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand11.png"></span>
+                            </a> 
+                        </li>
+                        <li class="logo-item">
+    					    <a href="store_stails.html" target="_blank" class="logo-item-link" data-track="done" style="z-index: 8;">
+        						<span class="logo-item-img"><img class="" src="images/brand12.png"></span>
+                            </a> 
+                        </li>
+						<!-- <li class="logo-item">
+						    <div class="logo-btn-wrap">
+						        <span class="logo-btn-text">更多品牌  敬请期待</span>
+						        <span class="logo-btn logo-btn-prev vipFont"><</span>
+						        <span class="logo-btn logo-btn-next vipFont abled">></span>
+						    </div>
+						</li> -->
+					</ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="goods_main" id="brand_main">
+	<div id="floorList" class="floor_list">
+        <div class="floor floor-load">
+            <div class="floor-inner comWidth">
+                <div class="floor-head"><span>品质女装</span><img src="images/gtit.png" alt="" class="tit_img"></div>
+                <div class="floor-body">
+                    <div class="limits clearfix">
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women1.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>           
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women2.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>          
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women3.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>               
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women4.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women5.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women6.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women7.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/women8.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">精品女装</div></div></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floor floor-load">
+            <div class="floor-inner comWidth">
+                <div class="floor-head"><span>潮流男装</span><img src="images/gtit1.png" alt="" class="tit_img"></div>
+                <div class="floor-body">
+                    <div class="limits clearfix">
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men1.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>           
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men2.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>          
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men3.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>               
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men4.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men5.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men6.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men7.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>
+                        <div class="brand"><a class="brand-link" href="store_stails.html" title="" target="_blank"><div class="brand-photo"><img class="" src="images/men8.jpg" style="display: inline;"></div><div class="brand-info"><div class="brand-name" style="color: #000">潮流男装</div></div></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- 导航 -->
+	<div id="aside" class="aside">
+	    <ul class="nav-list">
+            <li class="nav-item  nav-women"><a class="nav-link" href="javascript:;"><span class="nav-link-text">品质女装</span></a></li>
+            <li class="nav-item  nav-women"><a class="nav-link" href="javascript:;"><span class="nav-link-text">潮流男装</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="hr" style="height: 110px;"></div>
+<!-- 底部 -->
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/index.js"></script>
+<script src="js/category.js"></script>
+<script>
+// shopAllList();
+// shopAllListMore(0,1);
+$(document).ready(function(){
+    $(".brand:nth-child(4n)").css("margin-right","0");
+});
+$('.letter_list').on('click','li',function(){
+	$('.letter_list li').removeClass('active');
+	$(this).addClass('active');
+});
+ $(function(){
+    $(window).scroll(function() {
+        var currTop = $(window).scrollTop();
+        if (currTop >= 700) { 
+            $(".aside").addClass('aside_fixed')
+        }else{
+            $(".aside").removeClass('aside_fixed')
+        }
+    });
+})
+var floor = $('.floor');
+var oNav = $('.nav-list');//导航壳
+var aNav = oNav.find('.nav-item');//导航
+var sign=true;//这个开关用来控制点击小框时直接跳转而不会滚动 
+$(window).scroll(function(){ 
+    if(!sign){return;}        
+    var winH = $(window).height();//可视窗口高度
+    var iTop = $(window).scrollTop();//鼠标滚动的距离
+    if(iTop>=80){
+     //鼠标滑动式改变  
+         floor.each(function(){
+            if(winH+iTop - $(this).offset().top>winH/2){
+                aNav.removeClass('active');
+                aNav.eq($(this).index()).addClass('active');
+            }
+         })
+     }else{
+         aNav.removeClass('active');
+     }       
+})
+//点击回到当前楼层
+$('.nav-list').on('click','li',function(){
+    sign=false;
+    $('.nav-list li').removeClass('active');
+    $(this).addClass('active');
+    var t = floor.eq($(this).index()).offset().top; 
+    $('body,html').animate({"scrollTop":t},500,function(){
+        sign=true
+    });
+    return false;
+})
+</script>
+</body>
+</html>

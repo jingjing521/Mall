@@ -1,0 +1,12 @@
+/*************店铺详情*******************/
+#store .store_img{width: 195px;height: 195px;}
+#store .store_img img{width: 100%;height: 100%;}
+/*<!-- 底部时间条 -->*/
+body{position: relative;}
+.fixed{position: fixed;left: 0;bottom: 0;width: 100%;z-index: 999;}
+#time{width: 100%;height: 80px;line-height: 80px;font-size: 22px;color: #fff;background: url(../images/foot_bg.png) no-repeat;background-size: 100% 100%;}
+#time .store_show{margin-right: 57px;}
+#time .store_show em.discount_num{color: #f10180;padding:0 5px;}
+#time .comWidth .collect_brand{font-size: 14px;background:url(../images/fff_collect.png) no-repeat left center;padding-left: 24px;}
+#time #clock_foot{background:url(../images/fff_time.png) no-repeat left center;padding-left: 35px;}
+#time #clock_foot span{color: #f10180;}

@@ -1,0 +1,8 @@
+/*********分享*********/
+.share_icon{position: relative;cursor: pointer;}
+.collect_icon{cursor: pointer;}
+.share .share_icon .share_list{position: absolute;left: 0;top: 20px;display: none;}
+.share .share_icon .share_list li.share_item{float: left;margin:0 5px;width: 20px;height: 20px;}
+.share .share_icon .share_list li.share_item.share_qq{background: url(../images/share_icon1.png) no-repeat;background-position: -30px -40px;}
+.share .share_icon .share_list li.share_item.share_wx{background: url(../images/share_icon1.png) no-repeat;background-position: -210px -40px;}
+.share .share_icon .share_list li.share_item.share_wb{background: url(../images/share_icon1.png) no-repeat;background-position: 0 -40px;}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>皓歌服饰</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+<style>
+.nav-bar.show {
+    display: block;
+}
+.nav-bar {
+    height: 36px;
+    background-color: #fff;
+    border-bottom: 1px solid #cfc6bf;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    display: none;
+}	
+.wrap.nav-bar-center {
+    height: 100%;
+}
+@media screen and (min-width: 1440px)
+.wrap {
+    width: 1170px;
+}
+@media screen and (min-width: 1440px)
+.logo {
+    margin-right: 30px;
+}
+.logo {
+    float: left;
+    margin-right: 6px;
+}
+.nav {
+    color: #666666;
+    float: left;
+    padding-top: 6px;
+}
+.nav-item {
+    float: left;
+    height: 24px;
+}
+@media screen and (min-width: 1440px)
+.nav-link {
+    padding: 0 22px 0 46px;
+}
+.nav-link {
+    font-size: 12px;
+    line-height: 24px;
+    height: 100%;
+    padding: 0 14px 0 40px;
+    border-radius: 12px;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+</style>
+</head>
+<body>
+<div class="head">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li><a href="register.html">注册</a> 
+	            </li> 
+	            <li><a href="login.html">登录</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix">
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"><em class=""></em>购物车</a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>			
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>		 	
+	       <div class="search fr">
+                <div class="search_box clearfix" style="position: relative;">
+                    <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+                    <ul name="" id="ul" style="">
+                        <li value="" class="li active" style="line-height: 30px;">商品</li>
+                        <li value="" class="li" style="line-height: 30px;">品牌</li>
+                    </ul>
+                    <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+                    <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+                </div>
+            </div> 		 
+	    </div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="bgColor" id="nav">
+    <div class="inner comWidth">
+    	<ul class="clearfix">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="preSale.html">预售商品</a></li>
+			<li><a href="women_index.html">女装</a></li>
+			<li><a href="men_index.html">男士</a></li>
+			<li class="active"><a href="bag_index.html">箱包</a></li>
+			<li><a href="pei_index.html">配饰</a></li>
+			<li><a href="personalCenter.html">我的皓歌</a></li>
+			<li class="nav-category"><a href="category_goods.html" class="main-nav-atag current"><img class="link-front-icon J-link-front-icon" src="images/category.png">分类</a></li>
+		</ul>
+    </div>
+</div>	
+<!-- 精选/每日新特卖 -->
+<div id="selection" class="clearfix">
+    <div class="comWidth clearfix">
+        <div class="title">
+        	<img src="images/title1.png" alt="" class="title-img">
+            <h3><span class="line" style="margin-right: 30px;"></span>每日新特卖<span class="line" style="margin-left: 30px;"></span></h3>
+        </div>
+    	<ul class="leftArea first">
+			<li><a href="brand_list.html"><img src="images/1.jpg" alt=""></a></li>
+			<li><a href="brand_list.html"><img src="images/2.jpg" alt=""></a></li>
+		</ul>
+		<ul class="leftArea second">
+			<li><a href="brand_list.html"><img src="images/3.jpg" alt=""></a></li>
+			<li><a href="brand_list.html"><img src="images/4.jpg" alt=""></a></li>
+			<li><a href="brand_list.html"><img src="images/5.jpg" alt=""></a></li>
+		</ul>
+		<ul class="rightArea third">
+			<li><a href="brand_list.html"><img src="images/6.jpg" alt=""></a></li>
+			<li><a href="brand_list.html"><img src="images/7.jpg" alt=""></a></li>
+			<li><a href="brand_list.html"><img src="images/8.jpg" alt=""></a></li>
+		</ul>
+    </div>
+</div>
+<div class="comWidth">
+    <div class="title">
+    	<img src="images/title2.png" alt="" class="title-img">
+        <h3><span class="line" style="margin-right: 20px;"></span>特卖中<span class="line" style="margin-left: 20px;"></span></h3>
+    </div>
+	<ul class="comWidth brand-list" style="margin-top: 25px;">
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f1.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3.0</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f2.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3.0</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f3.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f4.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3.0</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f5.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3.0</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+		<li class="brand-item">
+		    <a href="store_stails.html" target="_blank">    
+		        <img src="images/f6.jpg" class="brand-img" style="display: inline;">
+		        <div class="brand-info">
+		            <span class="brand-discount"><span class="salebg2">3.0</span>折起</span><span class="brand-name" title="">鳄鱼Lacoste女士专场</span><p class="brand-time"><i class="time-icon"></i><span class="J_time_icon">剩<i>5</i>天</span></p>
+		        </div>
+		    </a>
+		</li>
+	</ul>
+</div>
+<!-- 二级导航 -->
+<div id="navBar" class="nav-bar">
+    <div class="wrap nav-bar-center comWidth">
+        <div class="logo"><img src="images/man-logo.png"></div>
+        <ul class="nav" id="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="goods_list.html"><i class="icon icon-coat"></i> <span class="nav-name">外套</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-down-jacket"></i> <span class="nav-name">羽绒服</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html" target="_blank" data-track="done"><i class="icon icon-sweater"></i> <span class="nav-name">毛衣</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-casual-pants"></i> <span class="nav-name">休闲裤</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html" target="_blank" data-track="done"><i class="icon icon-gym-shoes"></i> <span class="nav-name">运动鞋</span></a>
+            </li> 
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-boots"></i> <span class="nav-name">靴子</span></a>
+            </li> 
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-bag"></i> <span class="nav-name">单肩包</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-watch"></i> <span class="nav-name">手表</span></a>
+            </li> 
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-3c"></i> <span class="nav-name">3C数码</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="goods_list.html"><i class="icon icon-skin"></i> <span class="nav-name">男士护肤</span></a></li>
+        </ul>
+    </div>
+</div>
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">			
+            			
+           <!--  <p style="background:none; margin-top:0px;" class="client">		 -->
+                <img class="qrcode" src="images/code11.png">
+            <!-- </p> -->
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(document).ready(function(){
+    $(".brand-item:nth-child(2n)").css("margin-right","0");
+    }); 
+     $(window).scroll(function(){ 
+                   
+     var winH = $(window).height();//可视窗口高度
+     var iTop = $(window).scrollTop();//鼠标滚动的距离
+
+     if(iTop>=1200){
+     //鼠标滑动式改变  
+        $('.nav-bar').addClass('show');
+     }else{
+     	 $('.nav-bar').removeClass('show');
+     }
+})
+</script>
+</body>
+</html>

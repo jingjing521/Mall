@@ -1,0 +1,118 @@
+/*商品分类*/
+/*title*/
+.g-nav {position: relative;z-index: 2;}
+.g-nav .top-nav-wrap {height: 66px;}
+.g-nav .top-nav-wrap .top-nav-inner .top-nav-item {float: left;line-height: 43px;margin-top: 20px;}
+.g-nav .top-nav-wrap .top-nav-inner .top-nav-divide {float: left;padding: 0 30px;position: relative;font-size: 18px;top: 28px;color: #ccc;}
+.g-nav .top-nav-wrap .top-nav-inner .top-nav-item .top-nav-link {color: #f10180;font-size: 20px;}
+.g-nav .top-nav-wrap .top-nav-inner .curr {border-bottom: 2px solid #f10180;}
+.g-nav .top-nav-wrap .top-nav-inner .curr .top-nav-link{color: #000;}
+/****************商品*******************/
+.goods_main{margin-top: 25px;}
+.floor-list {
+    margin-bottom: 60px;
+
+}
+.floor{margin-top: 10px;margin-bottom: 20px;}
+.floor-head {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 60px;
+    height: 60px;
+    padding-left:10px;
+    border-bottom: 1px solid #000;
+    
+}
+.floor-head span{font-size: 22px;color: #000;}
+.floor-head .tit_img{margin-left: 15px;vertical-align: middle;}
+.floor-body {
+    font-size: 14px;
+    padding: 0 14px 0 30px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+.cate-second {
+    width: 862px;
+    float: left;
+}
+.cate-second-temp {
+    font-size: 14px;
+    line-height: 1;
+    min-height: 80px;
+    padding: 16px 0 24px 86px;
+    overflow: hidden;
+    position: relative;
+}
+.cate-img {
+    width: 70px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 16px;
+}
+.cate-list-fix {
+    margin-left: 40px;
+    margin-top: -17px;
+    border-top: 1px dotted #e8e8e8;
+}
+.cate-list-title {
+    padding-top: 20px;
+}
+.cate-list-title a {
+    color: #333;
+    font-weight: bold;
+}
+.ani {
+    transition: all .3s ease-out;
+}
+.cate-list-mores {
+    overflow: hidden;
+}
+.cate-fix {
+    margin-left: -16px;
+    overflow: hidden;
+}
+.cate-fix a {
+    color: #666;
+    line-height: 16px;
+    height: 16px;
+    display: inline-block;
+    padding: 0 16px;
+    margin-top: 12px;
+    position: relative;
+}
+/*************品牌分类**************/
+#brand_main .floor-body{padding: 0;border:none;border-top: 1px solid #e5e5e5;}
+.brand-category{margin-top: 30px;}
+.brand-enter-right {width: 100%;height: 100%;float: left;position: relative;overflow: hidden;}
+.brand-logo-list-wrap {height: 100%;}
+.brand-logo-list {height: 100%;margin: 1px 0 0 1px;}
+.logo-item {text-align: center;width: 198px;height: 140px;margin: -1px 0 0 -1px;float: left;border: 1px solid #e4e4e4;position: relative;overflow: hidden;}
+.logo-item-link.show {left: -100%;top: -100%;}
+.logo-item-link {width: 100%;height: 100%;position: absolute;left: 0;top: 0;background-color: #fff;}
+.logo-item-img {text-align: center;display: block;padding-top: 45px;}
+.logo-item img { width: 100px;height: 50px;vertical-align: top;}
+.brand {font-size: 14px;width: 280px;margin: 27px 26px 0 0; float: left;overflow: hidden;background: #fff;}
+.brand-photo {position: relative;overflow: hidden;width: 280px;height: 180px;}
+#brand_main .brand-photo img {width: 100%;}
+.brand-info {text-align: center;line-height: normal;padding: 4px 6px 0 6px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+
+/***********品牌分类**************/
+/*按字母搜索*/
+#search_letter{margin-top: 40px;}
+#search_letter .letter_list li{float: left;padding-right: 20px;color: #999;cursor: pointer;}
+#search_letter .letter_list li.active{color: #f10180;}
+/*************侧导航**************/
+.aside {width: 70px;overflow: hidden;position: fixed;top: 348px;right: 56%;z-index: 2;margin-right: 520px;background-color: #fafafa;}
+@media screen and (min-width: 1441px)
+.aside {margin-right: 605px;}
+.nav-item{height: 35px;line-height: 35px;text-align: center;}
+.nav-item.active{background-color: #f10180;}
+.nav-item.active a{color: #fff;}
+#brand_main .aside.aside_fixed{position: fixed;right: 56%;top: 30%;}
+#brand_main{position: relative;}
+#brand_main .aside{position: absolute;top:80px;right: 56%;background-color: #fff;border: 1px solid #ccc;}
+#brand_main .aside .nav-item{border-bottom: 1px dashed #ccc;}
+#brand_main .aside .nav-item:last-child{border-bottom: none;}

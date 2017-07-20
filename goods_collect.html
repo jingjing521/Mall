@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品收藏</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <style>
+        .layui-field-box{padding:0;}
+		.site-table th, .site-table td{border:none;}
+		.adderss_list .site-table th{padding: 0;} 
+		.layui-form-select dl dd.layui-this{background-color: #f10180;}
+		.site-table td{padding:0;}
+    </style>
+</head>
+<body>
+<div class="head">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li><a href="register.html">注册</a> 
+	            </li> 
+	            <li><a href="login.html">登录</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix">
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"><em class=""></em>购物车</a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>			
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>		 	
+	        <div class="search fr">
+	            <div class="search_box clearfix" style="position: relative;">
+	                <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+	            	<ul name="" id="ul" style="">
+		            	<li value="" class="li active" style="line-height: 30px;">商品</li>
+		            	<li value="" class="li" style="line-height: 30px;">品牌</li>
+	                </ul>
+	                <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+	                <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+	            </div>
+	        </div>		 
+	    </div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="bgColor" id="nav">
+    <div class="inner comWidth">
+    	<ul class="clearfix">
+			<li class="active"><a href="index.html">首页</a></li>
+			<li><a href="preSale.html">预售商品</a></li>
+			<li><a href="women_index.html">女装</a></li>
+			<li><a href="women_index.html">男士</a></li>
+			<li><a href="women_index.html">箱包</a></li>
+			<li><a href="women_index.html">配饰</a></li>
+			<li><a href="personalCenter.html">我的皓歌</a></li>
+			<li class="nav-category"><a href="category_goods.html" class="main-nav-atag current"><img class="link-front-icon J-link-front-icon" src="images/category.png">分类</a></li>
+		</ul>
+    </div>
+</div>	
+<div class="personalCenter comWidth clearfix">
+    <div class="leftArea">
+   	    <ul class="expmenu">
+   	        <li class="sele">
+				<div class="header">
+					<span class="label"><a href="personalCenter.html">我的皓歌</a></span>
+					<span class="arrow down"></span>
+				</div>
+			</li>
+   	        <li>
+   	            <a href="my_order.html">
+					<div class="header">
+						<span class="label">我的订单</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+			    <a href="my_integration.html">
+					<div class="header">
+						<span class="label">我的积分</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li  class="selected">
+				<a href="goods_collect.html">
+					<div class="header">
+						<span class="label">我的收藏</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="my_carts.html">
+					<div class="header">
+						<span class="label">我的购物车</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="address.html">
+					<div class="header">
+						<span class="label">地址管理</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<div class="header server">
+					<span class="label">客户服务</span>
+					<span class="arrow down"></span>
+				</div>
+				<ul class="menu" style="display: block;">
+					<li><a href="secure.html">安全中心</a></li>
+					<li><a href="help.html">帮助中心</a></li>
+					<li><a href="Feedback.html">意见反馈</a></li>
+				</ul>
+			</li>
+	    </ul>
+    </div>
+    <div class="rightArea" style="height: 825px;" id="collect">
+        <div class="person_title pt"><span>我的收藏</span></div>
+        <ul class="collect_list clearfix">
+        	<a href="goods_collect.html"><li class="active">商品收藏</li></a>
+        	<a href="brand_collect.html"><li>品牌收藏</li></a>
+        </ul>
+        <div class="layui-field-box">
+			<table class="site-table">
+				<thead>
+					<tr>
+						<th style="text-align: left;padding-left: 20px;min-height: 30px;line-height: 30px;">商品信息</th>
+						<th style="width: 350px;min-height: 30px;line-height: 30px;">价格</th>
+						<th style="min-height: 35px;line-height: 35px;">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="clearfix td">
+	                        <a href="general_goods.html">
+			   	    			<div class="carts-photo fl" style="width: 100px;height: 100px;">
+						            <img class="" src="images/s1.jpg" style="display: inline;">
+						        </div>
+						        <div class="carts-info fl">
+						            <h6 class="brand-name" style="margin-left: 25px;">T恤 圆领原点浮雕面料加衬下摆格子拼接常规款宽松A字打底T恤上衣</h6>
+						            <p class="price" style="text-align: left;margin-left: 25px;"><span>咖啡色</span><span style="margin-left: 20px;">XXL</span></p>
+						        </div>
+			   	    		</a>
+						</td>
+						<td style="color: #f10180;width: 300px;">￥<em>49.00</em></td>
+						<td><a href="#" class="btn1" onclick="del(this)">取消收藏</a></td>
+					</tr>
+					<tr>
+						<td class="clearfix td">
+	                        <a href="general_goods.html">
+			   	    			<div class="carts-photo fl" style="width: 100px;height: 100px;">
+						            <img class="" src="images/s1.jpg" style="display: inline;">
+						        </div>
+						        <div class="carts-info fl">
+						            <h6 class="brand-name" style="margin-left: 25px;">T恤 圆领原点浮雕面料加衬下摆格子拼接常规款宽松A字打底T恤上衣</h6>
+						            <p class="price" style="text-align: left;margin-left: 25px;"><span>咖啡色</span><span style="margin-left: 20px;">XXL</span></p>
+						        </div>
+			   	    		</a>
+						</td>
+						<td style="color: #f10180;width: 300px;">￥<em>49.00</em></td>
+						<td><a href="#" class="btn1" onclick="del(this)">取消收藏</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="clearfix do">
+			<div style="float: left;padding-top: 2%;">
+				<span class="all">全选</span><span class="cancel" onclick="a">取消收藏</span>
+			</div>
+			<div class="pages" style="float: right;">
+		        <div id="Pagination">
+		        </div>
+		        <div class="searchPage">
+		          <span class="page-sum">共<strong class="allPage">3</strong>页</span>
+		          <span class="page-go">转到<input type="text">页</span>
+		          <a href="javascript:;" class="page-btn">确认</a>
+		        </div>
+            </div>
+		</div>
+		
+    </div>
+</div>
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">			
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="plugins/layui/layui.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script>
+jQuery.support.cors = true;
+layui.use(['layer'], function(){
+});
+function del(r) {
+	layer.confirm('确认要取消收藏么？', {
+		btn: ['确认', '取消'],
+	}, function() {
+		layer.msg('取消收藏成功');
+		 
+	}, function() {
+		//取消
+		layer.msg('取消收藏失败');
+	});
+}
+$(document).ready(function(){					   
+	/* 滑动/展开 */
+	$("ul.expmenu li > div.header").click(function(){		
+		var arrow = $(this).find("span.arrow");
+		if(arrow.hasClass("up")){
+			arrow.removeClass("up");
+			arrow.addClass("down");
+		}else if(arrow.hasClass("down")){
+			arrow.removeClass("down");
+			arrow.addClass("up");
+		}
+		$(this).parent().find("ul.menu").slideToggle();
+	});	
+});
+// 点击事件
+$('.all').on('click',function(){
+	$('.all').toggleClass('active');
+	if($(this).hasClass('active')){
+		$('.td').addClass('active');
+	}else{
+       $('.td').removeClass('active');
+	}
+})
+$('#collect').on('click','.td',function(){
+	$(this).toggleClass('active');
+	console.log($('.td.active').length);
+	if($('.td.active').length == 3){
+		$('.all').addClass('active');
+	}else{
+		$('.all').removeClass('active');
+	}
+})
+</script>
+<script src="js/md5.js"></script>
+<script src="js/index.js"></script>
+<script>
+layui.use(['layer'], function(){
+});
+function a(){
+	layer.open({
+	   type: 1,
+	   title: '温馨提示',
+	   // skin: 'layui-layer-rim', //加上边框
+	   area: ['367px', '193px'], //宽高
+	   content:"collect_success.html",
+	   btn1: function(){
+          layer.closeAll();
+        }
+   });
+}
+$("#Pagination").pagination(3);
+var pageIndex = 0; //页面索引初始值
+var pageSize = 10; //每页显示条数初始化，修改显示条数，修改这里即可
+// $(function () {
+// 	InitTable(0); //Load事件，初始化表格数据，页面索引为0（第一页）
+// 	//分页，PageCount是总条目数，这是必选参数，其它参数都是可选
+// 	$("#Pagination").pagination({
+// 		callback: PageCallback, //PageCallback() 为翻页调用次函数。
+// 		prev_text: "« 上一页",
+// 		next_text: "下一页 »",
+// 		items_per_page:pageSize,
+// 		num_edge_entries: 2, //两侧首尾分页条目数
+// 		num_display_entries: 6, //连续分页主体部分分页条目数
+// 		current_page: pageIndex, //当前页索引
+// 		});
+// 		//翻页调用
+// 		function PageCallback(index, jq) {
+// 			InitTable(index);
+// 		}
+// 		//请求数据
+// 		function InitTable(pageIndex) {
+// 			var fromtype = 'pc';
+// 			var timestamp = Date.parse(new Date());
+// 		    var values=['timestamp','user_id','fromtype','page'];
+// 		    var data={'timestamp':timestamp,'user_id':user_id,'fromtype':fromtype,'page':pageIndex};
+// 		    var sign = doSign(values,data);
+// 		    $.ajax({
+// 			    type : "post",
+// 			    url : url+'goodsCollectListByUser', 
+// 			    data:{'timestamp':timestamp,'user_id':user_id,'key':key,'fromtype':fromtype,'page':pageIndex,'sign':sign}, 
+// 			    dataType : "json",
+// 			    success : function(data){
+// 			    	console.log(data);	    	
+// 			      	if( data.status == 1){
+// 				      	$.each(data.data,function(i,v){
+// 	              			$('<tr><td class="clearfix td"><a href="general_goods.html?goods_id='+v.goods_id+'"><div class="carts-photo fl" style="width: 100px;height: 100px;"><img class="" src="'+v.smeta.thumb+'" style="display: inline;"></div><div class="carts-info fl"><h6 class="brand-name" style="margin-left: 25px;text-align:left;">'+v.name+'</h6><p class="price" style="text-align: left;margin-left: 25px;"><span>咖啡色</span><span style="margin-left: 20px;">XXL</span></p></div></a></td><td style="color: #f10180;width: 300px;">￥<em>'+v.price+'</em></td><td><a href="#" class="btn1" onclick="del(this)">取消收藏</a></td></tr>').appendTo($('.site-table tbody'))
+
+// 	            		});
+// 			      	}
+// 			    },
+// 			    error: function (a, b, c) {}  
+// 		   })
+// 		}
+// });
+// /*
+// 收藏的商品列表接口goodsCollectListByUser
+// user_id	Int(11)	用户id	Y	
+// key	String	秘钥key	Y	timestamp	Int(11)	时间戳	Y	sign	String	签名	Y	
+// */
+// var page = 0;
+// // goodsCollectListByUser(page);
+// function goodsCollectListByUser(page){
+// 	var fromtype = 'pc';
+// 	var timestamp = Date.parse(new Date());
+//     var values=['timestamp','user_id','fromtype','page'];
+//     var data={'timestamp':timestamp,'user_id':user_id,'fromtype':fromtype,'page':page};
+//     var sign = doSign(values,data);
+//     $.ajax({
+// 	    type : "post",
+// 	    url : url+'goodsCollectListByUser', 
+// 	    data:{'timestamp':timestamp,'user_id':user_id,'key':key,'fromtype':fromtype,'page':page,'sign':sign}, 
+// 	    dataType : "json",
+// 	    success : function(data){	    	
+// 	      if( data.status == 1){
+// 	      	console.log(data);
+//             $.each(data.data,function(i,v){
+//               	$('<tr><td class="clearfix td"><a href="general_goods.html?goods_id='+v.goods_id+'"><div class="carts-photo fl" style="width: 100px;height: 100px;"><img class="" src="'+v.smeta.thumb+'" style="display: inline;"></div><div class="carts-info fl"><h6 class="brand-name" style="margin-left: 25px;text-align:left;">'+v.name+'</h6><p class="price" style="text-align: left;margin-left: 25px;"><span>咖啡色</span><span style="margin-left: 20px;">XXL</span></p></div></a></td><td style="color: #f10180;width: 300px;">￥<em>'+v.price+'</em></td><td><a href="#" class="btn1" onclick="del(this)">取消收藏</a></td></tr>').appendTo($('.site-table tbody'))
+
+//             });
+
+//             if(data.extra.totalpage >1){
+//   				$('.pages').css('display','block');
+//   				$("#Pagination").pagination(data.extra.totalpage);
+//   				$('.allPage').text(data.extra.totalpage);
+// 	      	}else{
+// 	      		$('.pages').css('display','none');
+// 	      	}
+// 	      }else{
+// 	      	$('.do').css('display','none');
+// 	      	$('<p style="line-height:50px;margin-top:20px;">'+data.data+'</p><p style="line-height:30px;"><a href="index.html" style="color:#f10180;">去添加&gt;</a></p>').appendTo($('.site-table tbody')) 
+// 	      }
+// 	    },
+// 	    error: function (a, b, c) {}  
+//   })
+// }
+// /*商品收藏清空接口goodsCollectClear
+// user_id	Int(11)	用户id	Y	
+// key	String	秘钥key	Y	timestamp	Int(11)	时间戳	Y	sign	String	签名
+// */
+// function goodsCollectClear(){
+// 	var timestamp = Date.parse(new Date());
+//     var values=['timestamp','user_id'];
+//     var data={'timestamp':timestamp,'user_id':user_id};
+//     var sign = doSign(values,data);
+//     $.ajax({
+// 	    type : "post",
+// 	    url : url+'goodsCollectClear', 
+// 	    data:{'timestamp':timestamp,'user_id':user_id,'key':key,'sign':sign}, 
+// 	    dataType : "json",
+// 	    success : function(data){
+	    	
+// 	      if( data.status == 1){
+//                console.log(data);
+                
+// 	      } 
+// 	    },
+// 	    error: function (a, b, c) {} 
+// 	    }) 
+// }
+// $('.cancel').on('click',function(){
+// 	goodsCollectClear();
+// 	goodsCollectListByUser();
+// })
+</script>
+</body>
+</html>

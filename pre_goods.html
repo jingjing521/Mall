@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预售商品</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/goods.css">
+	<link rel="stylesheet" href="css/goods_detail.css">
+	<link rel="stylesheet" href="theme/style.css" type="text/css" media="screen" />
+	<style>
+	.img_list li.active{border: 1px solid #f10180;} 
+    a:hover{color: #fff;}
+    .dt-list li a:hover{color: #19191a;}
+    .M-detailTopFixed{border-bottom: 3px solid #000;}
+    .M-detailTopFixed .dt-list .selected a{border-bottom: 3px solid #f10180;border-top: 0;color:#f10180;}
+    .M-detailTopFixed .dt-cart {
+	    float: right;
+	    position: relative;
+	    height: 40px;
+	    line-height: 40px;
+	    top: -1px;
+	}
+	.M-detailTopFixed .dt-cart-price {
+	    font-size: 26px;
+	    color: #f43499;
+	    padding-right: 15px;
+	}
+	.M-detailTopFixed .dt-cart-yen {
+	    font-size: 20px;
+	}
+	.M-detailTopFixed .dt-cart .dt-cart-btn {
+		border: none;
+	    border-radius: 0;
+	    display: inline-block;
+	    width: 177px;
+	    height: 40px;
+	    line-height: 40px;
+	    vertical-align: top;
+	    font-size: 18px;
+	    background-color: #f10180;
+	    color: #FFF;
+	}
+	</style>
+</head>
+<body>
+<div class="head">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li><a href="register.html">注册</a> 
+	            </li> 
+	            <li><a href="login.html">登录</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix">
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"><em class=""></em>购物车</a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>			
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>		 	
+	        <div class="search fr">
+                <div class="search_box clearfix" style="position: relative;">
+                    <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+                    <ul name="" id="ul" style="">
+                        <li value="" class="li active" style="line-height: 30px;">商品</li>
+                        <li value="" class="li" style="line-height: 30px;">品牌</li>
+                    </ul>
+                    <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+                    <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+                </div>
+            </div> 		 
+	    </div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="bgColor" id="nav">
+    <div class="inner comWidth">
+    	<ul class="clearfix">
+			<li><a href="index.html">首页</a></li>
+			<li class="active"><a href="preSale.html">预售商品</a></li>
+			<li><a href="women_index.html">女装</a></li>
+			<li><a href="women_index.html">男士</a></li>
+			<li><a href="women_index.html">箱包</a></li>
+			<li><a href="women_index.html">配饰</a></li>
+			<li><a href="personalCenter.html">我的皓歌</a></li>
+			<li class="nav-category"><a href="category_goods.html" class="main-nav-atag current"><img class="link-front-icon J-link-front-icon" src="images/category.png">分类</a></li>
+		</ul>
+    </div>
+</div>		
+<div class="comWidth goods" id="pre_goods" style="position: relative;">
+	<h2>三里屯上古快销店</h2>
+	<div class="clearfix">
+		<div class="container clearfix leftArea">
+		    <div class="clearfix">
+				<div class="big_img" style="width: 420px;height: 420px;float: left;">
+	                <img src="" alt="" style="width: 100%;" id="img">
+	                <video id="player_a" class="projekktor" poster="media/intro.png" title="this is Projekktor" width="420" height="420" controls style="position: absolute;left: 0;top:40px;">
+	                    <source src="http://www.100sucai.com/img/video/happyfit2.mp4" type="video/mp4" />
+	                </video>   
+	            </div>
+	            <ul class="img_list" style="margin-left: 10px;float: left;">
+	                <li style="margin-bottom: 10px;margin-left: 10px;width: 76px;height: 76px;box-sizing: border-box;" class="active"><img src="images/dd1.jpg" alt="" style="width: 100%;height: 100%;"></li>
+	                <li style="margin-bottom: 10px;margin-left: 10px;width: 76px;height: 76px;box-sizing: border-box;"><img src="images/s10.jpg" alt="" style="width: 100%;height: 100%;"></li>
+	                <li style="margin-bottom: 10px;margin-left: 10px;width: 76px;height: 76px;box-sizing: border-box;"><img src="images/s8.jpg" alt="" style="width: 100%;height: 100%;"></li>
+	                <li style="margin-bottom: 10px;margin-left: 10px;width: 76px;height: 76px;box-sizing: border-box;"><img src="images/s7.jpg" alt="" style="width: 100%;height: 100%;"></li>
+	                <li style="margin-bottom: 10px;margin-left: 10px;width: 76px;height: 76px;box-sizing: border-box;"><img src="images/s9.jpg" alt="" style="width: 100%;height: 100%;"></li>
+	            </ul>
+		    </div>		
+			<ul class="clearfix share">
+				<li class="fl share_icon">分享
+                    <ul class="share_list clearfix">
+						<li class="share_item share_qq"></li>
+						<li class="share_item share_wx"></li>
+						<li class="share_item share_wb"></li>
+				    </ul>
+				</li>
+				<li class="fl collect_icon">收藏商品（<span>250</span>人气）</li>
+			</ul>
+		</div>
+		<div class="leftArea goods_des">
+		    <div class="custom_service"><span>客服</span><span><img src="images/QQ.png" alt=""></span></div>
+		    <div class="clearfix">
+		    	<p class="tit">2016秋冬新品 立领修身加厚保暖羽绒服PRJD68901C</p>
+		    </div>		
+			<p class="price clearfix">
+			    <span class="fl">定金<span class="price_n">￥<em>50.00</em></span></span>
+			    <span style="margin-left: 20px;" class="fl">总价<span class="price_n">￥<em>725.00</em></span></span>
+			    <span id="clock" class="date fl">
+			        <span>155</span> 星期 
+			        <span>05</span> 天 
+			        <span>10</span> 小时 
+			        <span>19</span> 分钟 
+			        <span>52</span> 秒
+			    </span>
+			</p>
+			<p style="font-size: 14px;color: #666;line-height: 30px;margin-top: 10px;">支付尾款时间： 2016.11.11 01:00—2016.11.12 23:59</p>
+			<ul class="clearfix comment_list">
+				<li style="width: 33%">累计评论：<span>2263</span></li>
+				<li style="width: 33%">交易成功：<span>5000</span></li>
+				<li style="width: 33%">赠送积分：<span>50</span></li>
+			</ul>
+			<div class="goods-prowrap goods-sku goods-pannel" id="J_GoodsSku">
+		  	    <div class="content">
+		    		<div class="pannel-title" style="display: none;">
+			            <span class="choose-goods-info">选择商品信息</span>
+			            <b class="J_PannelClose pannel-close"></b>
+		    		</div>
+		    		<div class="box"> 
+		                <dl class="size clearfix" style="display: block;">
+		    				<dt>尺码</dt>
+		    				<dd>
+		    					<ol class="J_SizeList size-list clearfix">
+		    					    <li class="">155</li><li class="">165</li><li class="">170</li><li class="">175</li>
+		    					</ol>
+		    				</dd>
+		      			</dl>
+		      			<dl class="style clearfix" style="display: block;">
+		    				<dt>颜色</dt>
+		    				<dd>
+		    				    <ol class="J_StyleList style-list clearfix"><li class="img" title="图色"><img src="images/color1.jpg"><b></b></li><li class="img" title="图色"><img src="images/color2.jpg"><b></b></li></ol>
+		    				</dd>
+		      			</dl>
+		                <dl class="clearfix">
+			                <dt>数量</dt>
+			                <dd class="num clearfix">
+		                        <div id="J_GoodsNum" class="goods-num fl"> 
+		                            <input class="num-input" type="text" value="1">
+		                            <div style="display: inline-block;" id="num">
+		                            	<span class="num-add num-disable"></span>
+		                                <span class="num-reduce"></span>
+		                            </div>
+			                    </div>
+			                    <span class="fl" style="line-height: 45px;margin-left: 20px;">件</span>
+			                    <div class="J_GoodsStock goods-stock fl" style="margin-left: 20px;">库存<em class="all_num">10</em>件</div>
+			                    <div class="J_GoodsStockTip goods-stock-tip fl">您所填写的商品数量超过库存！</div>  
+		                	</dd>
+		                </dl>
+				    </div>
+		        </div>
+		        <div class="goods-buy">
+		            <a href="javascript:void" id="J_BuyNow" class="fl mr10 buy-btn buy-now">立即付定金</a>
+		            <ul class="pay_list clearfix"> 
+		                <li style="line-height: 30px;">支付方式：</li>
+		            	<li class="pay_item"><a href=""><img src="images/pay1.jpg" alt=""></a></li>
+		            	<li class="pay_item"><a href=""><img src="images/pay2.jpg" alt=""></a></li>
+		            </ul>
+		        </div>   
+		    </div> 
+		</div>	
+	</div>
+	<div class="goods_detail">
+	<!-- title开始 -->
+		<div class="tt">
+			<div class="M-detailTop comWidth clearfix">
+			    <div class="comWidth">
+			   	    <ul class="dt-list">
+						<li class="dt-item"><a href="#J-FW-detail" data-scroll="J-FW-detail" class="dt-list-item J-topbar-tabs">商品详情</a></li>
+						<li class="dt-item"><a href="#J-FW-recomBox" data-scroll="J-FW-recomBox" class="dt-list-item J-topbar-tabs">商品推荐</a></li>
+						 
+				    </ul>
+					<div class="dt-cart" id="J-topbar-addBtn" style="display: none">
+	                    <span id="J-topBar-sell-price" class="dt-cart-price">
+	                        <i class="dt-cart-yen">¥</i><em class="J-price">279</em>
+	                    </span>
+	                    
+	                </div>
+			    </div>
+			</div>
+		</div>
+    <!-- title结束 -->
+          <div class="HG-detailCon three">
+        	<div class="attributes-list clearfix content1" id="J-FW-detail">
+			        <p class="attr-list-hd">产品参数</p>
+					<ul id="J_AttrUL clearfix">
+					    <li>充绒量：<span>100g(含)-150g(不含)</span></li>
+					    <li>服装版型：&nbsp;修身</li>
+					    <li>图案：&nbsp;纯色</li>
+					    <li>货号：&nbsp;PRJD68901C-1</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+					    <li>充绒量：<span>100g(含)-150g(不含)</span></li>
+					    <li>服装版型：&nbsp;修身</li>
+					    <li>图案：&nbsp;纯色</li>
+					    <li>货号：&nbsp;PRJD68901C-1</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+					    <li>品牌：&nbsp;Bosideng/波司登</li>
+		            </ul>
+	           
+			</div>	
+			<div style="margin-top: 125px;" class="content1" id="J-FW-recomBox">			
+				<img src="images/big1.jpg" alt="" style="display: block;margin:0 auto">
+				<img src="images/big2.jpg" alt="" style="display: block;margin:0 auto;margin-top: 10px;">
+				<img src="images/big4.png" alt="" style="display: block;margin:0 auto;margin-top: 10px;">
+				<img src="images/big3.jpg" alt="" style="display: block;margin:0 auto;margin-top: 10px;">
+		    </div>
+			 
+			 
+            </div>
+        </div>
+	</div>
+</div>
+<!-- 底部 -->
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="plugins/layui/layui.js"></script>
+<script src="js/user.js"></script>
+<script src="js/jquery.jqzoom.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/goods.js"></script>
+<script type="text/javascript" src="js/projekktor.js"></script>
+<script>
+layui.use(['layer'], function(){
+});
+function a(){
+	layer.open({
+	   type: 2,
+	   title: '温馨提示',
+	   // skin: 'layui-layer-rim', //加上边框
+	   area: ['367px', '193px'], //宽高
+	   content:"collect_success.html",
+	   btn1: function(){
+          layer.closeAll();
+        }
+   });
+}
+// 倒计时
+$(function(){
+		$('#clock').countdown('2100/4/11', function(event) {
+		  var $this = $(this).html(event.strftime(''
+			+ '<span>剩余：</span> '
+			+ '<span>%d</span> 天 '
+			+ '<span>%H</span> 小时 '
+			+ '<span>%M</span> 分 '
+			+ '<span>%S</span> 秒'));
+		});
+	})
+
+	//鼠标经过预览图片函数
+	function preview(img){
+		$("#preview .jqzoom img").attr("src",$(img).attr("src"));
+		$("#preview .jqzoom img").attr("jqimg",$(img).attr("bimg"));
+	}
+	//图片放大镜效果
+	$(function(){
+		$(".jqzoom").jqueryzoom({xzoom:380,yzoom:410});
+	});
+	$('.goods_des .comment_list li:first-child').css('text-align','left');
+	$('.goods_des .comment_list li:last-child').css({'text-align':'right','float':'right','border-right':'none'})
+	$('.pannel-close').on('click',function(){
+		$('.pannel-title').css('display','none');
+		$('.content').removeClass('border');
+		$('.box').removeClass('pad20');
+	})
+	// 颜色选择
+	$('.style-list').on('click','.img',function(){
+		$('.img').removeClass('c');
+		$(this).toggleClass('c');
+		$('.pannel-title').css('display','none');
+		$('.content').removeClass('border');
+		$('.box').removeClass('pad20');
+	})
+	// 尺寸选择
+	$('.size-list').on('click','li',function(){
+		$('.size-list li').removeClass('c');
+		$(this).toggleClass('c');
+		$('.pannel-title').css('display','none');
+		$('.content').removeClass('border');
+		$('.box').removeClass('pad20');
+	})
+// 商品数量
+	var All_num = $('.all_num').text();
+	var num = $('.num-input').val();
+	$('.num-add').on('click',function(){
+		num++;
+		$('.num-input').val(num);
+		if( num >All_num ){
+	       $('.goods-stock-tip').css('display','block');
+	       $('.goods-sku .goods-num .num-input').addClass('error')
+		}
+	});
+	$('.num-input').on('change',function(){
+		
+	    console.log($('.num-input').val());
+	    var n = $('.num-input').val();
+	    if( n >All_num ){
+	       $('.goods-stock-tip').css('display','block');
+	       $('.goods-sku .goods-num .num-input').addClass('error');
+		}
+	    else if( n <= All_num ){
+	       $('.goods-stock-tip').css('display','none');
+	       $('.goods-sku .goods-num .num-input').removeClass('error');
+		}
+	})
+	$('.num-reduce').on('click',function(){
+		$('.num-reduce').css('cursor','pointer');
+		if( num > 1){
+			
+	        num--;
+			$('.num-input').val(num);
+			if( num <= All_num ){
+		       $('.goods-stock-tip').css('display','none');
+		       $('.goods-sku .goods-num .num-input').removeClass('error')
+			}
+		}else{
+			$('.num-input').val(1);
+			$('.num-reduce').css('cursor','not-allowed');
+		}
+	})
+	$('#J_BuyNow').on('click',function(){
+		if( $('.style-list .img.c').length == 0 ||  $('.size-list li.c').length == 0){
+			$('.pannel-title').css('display','block');
+		    $('.content').addClass('border');
+		    $('.box').addClass('pad20');
+		}else if($('.num-input').val() < 1 || $('.num-input').val() > All_num ){
+			
+	        $('.goods-stock-tip').css('display','block');
+	        $('.goods-sku .goods-num .num-input').addClass('error');
+		}
+		else{
+			window.location.href="order_confirm_pre.html";
+		}
+	})
+	$(document).ready(function() {
+	    projekktor('#player_a'); // instantiation
+
+	});
+    $('.img_list').on('mousemove','li',function(){
+    	$('#player_a_media #player_a_media_image').css({'height':'100%','top':'0'});
+        $('.img_list li').removeClass('active');
+        $(this).toggleClass('active');
+        var img_url = $(this).find('img').attr('src');
+        $('.big_img').find('#img').attr('src',img_url);
+        if( $('.img_list li:gt(0)').hasClass('active')){
+            $('#player_a').css('display','none');
+        }else{
+            $('#player_a').css('display','block');
+        }
+    })  
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*购物车添加成功弹出页面*/
+.Popup{
+    width: 350px;
+    height: 145px;
+    margin: 0;
+    padding: 0;
+}
+.Popup .success{
+    width: 145px;
+    height: 35px;
+    line-height: 35px;
+    padding-top:20px;
+    position: relative;
+    left: 111px;
+}
+.Popup .success i{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url(../images/sj_consult.png) no-repeat;
+    background-position: -69px -58px;
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+}
+.Popup .success span{
+    font-size: 20px;
+    color:#495f69;
+}
+.Popup .btn{
+    width: 230px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    left: 6px;
+}
+.Popup .btn .button{
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.Popup .btn span:hover{
+    cursor:pointer;
+}
+.Popup .btn .btn1{
+    float: left;
+    border:1px solid #deeaec;
+    background: #f4f9fa;
+    color:#6796aa;
+
+}
+.Popup .btn .btn2{
+    float: right;
+    background: #f10180;
+    color:#fff;
+}

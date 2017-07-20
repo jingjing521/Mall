@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>皓歌服饰---确认订单</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/carts.css">
+	<style>
+		.layui-field-box{padding:0;}
+		.site-table th, .site-table td{border:none;}
+		.adderss_list .site-table th{padding: 0;}
+		.adderss_list .site-table td{padding:20px;}
+		.layui-form-select dl dd.layui-this{background-color: #f10180;}
+	</style>
+</head>
+<body>
+<!-- 顶部 -->
+<div class="head" id="order">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li class="user_name"><a href="register.html">dreaming1024</a> 
+	            </li> 
+	            <li><a href="login.html">退出</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix"> 
+	            <li class="drop">		
+	              	<a href="index.html" target="_blank"><em class="collect"></em>首页</a>
+	            </li>
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"> <em class="cart"></em>购物车<span>（<i class="cart_num">10</i>）</span></a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>		
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>	 
+	    </div>
+	</div>
+</div>
+<!-- 支付步骤 -->
+<div class="comWidth clearfix" id="order_step">
+	<ul class="order_step fr">
+		<li class="cart active"><a href="">查看购物车</a></li>
+		<li class="active"><a href="">确认订单</a></li>
+		<li><a href="">支付成功</a></li>
+		<li><a href="">交易完成</a></li>
+	</ul>	
+</div>
+<div class="comWidth adderss_list">
+    <h6>收货地址信息</h6>
+    <div class="content">
+    	<ul>
+	        <li>收货地址：  北京市  朝阳区  八里庄陈家林甲1号  泰禾文化大厦B座2层156室    李女士    15677885246</li>
+	        <li>收货地址：  北京市  朝阳区  八里庄陈家林甲1号  泰禾文化大厦B座2层156室    李女士    15677885246</li>
+	        <li>收货地址：  北京市  朝阳区  八里庄陈家林甲1号  泰禾文化大厦B座2层156室    李女士    15677885246</li>
+	        <li>收货地址：  北京市  朝阳区  八里庄陈家林甲1号  泰禾文化大厦B座2层156室    李女士    15677885246</li>
+    	</ul>
+    	<p class="more"><a href="address.html">更多地址 >></a></p>
+    	<a href="address_add.html"><span class="new_address">+ 使用新地址</span></a>
+    </div> 
+</div>
+<!-- 购物车列表 -->
+<div class="sj_center">
+    <div class="page">
+        <!-- 购物车列表 -->
+        <form id="cart_form">
+            <input type="hidden" name="type" id="type" value="0">
+            <div id="ajax_return">
+                <div class="goods_cart">
+                    <div class="item" style="line-height: 45px;color: #19191a;font-size: 16px;">
+                        <span>商品信息</span>
+                    </div>
+                    <div class="goods_cart_list">
+                        <div class="shop_list">
+                            <div class="table_content">
+                                <div class="cart-table-th">
+                                    <div class="wp">
+                                        <div class="th th-info" style="width: 600px"><div class="td-inner">商品</div></div>
+                                        <div class="th th-spec"><div class="td-inner">单价（元）</div></div>
+                                        <div class="th th-count"><div class="td-inner">数量（个）</div></div>
+                                        <div class="th th-sub"><div class="td-inner">金额小计</div></div>
+                                    </div>
+                                </div>
+                                <div class="cs">
+	                                <div class="store_name"><p>门店：</p><span>女装</span></div>
+	                                <div class="order_content">
+	                                	<ul class="item_content">
+	                                		<li class="td td-info" style="width:600px;">
+	                                			<div class="td_inner">
+	                                				<a href="">
+	                                					<div class="carts-photo fl">
+	                                						<img class="" src="images/s1.jpg" style="display: inline;">
+	                                					</div>
+	                                					<div class="carts-info fl">
+	                                						<h6 class="brand-name">女装</h6>
+	                                						<p class="price">咖啡色 XXL</p>
+	                                					</div>
+	                                				</a>
+	                                			</div>
+	                                		</li>
+	                                		<li class="td td-spec" style="line-height: 100px;">
+	                                			<div class="td_inner"><span>￥<i class="unit-price">90</i></span></div>
+	                                		</li>
+	                                		<li class="td td-count" style="line-height: 100px;">
+	                                			<div class="td_inner"><span>1</span></div>
+	                                		</li>
+	                                		<li class="td td-sub" style="line-height: 100px;"><div class="td_inner"><span style="font-size:14px;">￥<em class="sub_price">90</em></span></div>
+	                                		</li>
+	                                	</ul>
+	                                </div>
+	                                <div class="clearfix">
+	                                	<div class="leftArea">
+	                                		<div class="layui-form-item">
+	                                			<label for="" class="layui-form-label" style="width: 100px;">配送费：</label>
+	                                			<div class="layui-inline" style="padding-left:10px;line-height: 40px;">￥<span class="y_fee">23</span>
+	                                			</div>
+	                                		</div>
+	                                		<div class="layui-form-item">
+	                                			<label for="" class="layui-form-label" style="width: 100px;">给卖家留言：</label>
+	                                			<div class="layui-inline" style="padding-left:10px">
+	                                				<textarea name="" id="" class="layui-textarea" style="width: 400px;height: 90px;" placeholder="给我们留言（选填、45字以内）"></textarea>
+	                                			</div>
+	                                		</div>
+	                                	</div>
+	                                	<div class="rightArea" style="padding-right: 100px;padding-top: 50px;">
+	                                		<p style="line-height: 40px;font-size: 16px;">共1件</p>
+	                                		<p style="line-height: 40px;font-size: 16px;">合计：<span style="color:#f10180;" >￥<i class="total_p">100</i></span></p>
+	                                	</div>
+	                                </div>
+                               </div>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+</div>
+<div class="comWidth clearfix" style="border-top: 1px solid #ccc;">
+	<div class="rightArea" id="money">
+		<p class="m_des">商品金额<em class="total_fee">29.8</em>元 + 运费<em class="y_fee1">10</em>元</p>
+		<p class="score"><span class="ss">积分抵扣</span><span class="score_num">可用<i>1004</i>积分</span><em class="score_m">100.00</em>元</p>
+		<p class="m_total">订单总金额<span>￥<em class="m_totals">39.8</em></span>元</p>
+	</div>
+</div>
+<div class="comWidth clearfix" id="order_con">
+	<a href="order_success.html">
+	<div class="pay_btn fr" style="padding:0;width: 170px;height: 45px;line-height: 45px;text-align: center;">提交订单</div>
+	</a>
+</div>
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
+<script>
+$('.adderss_list').on('click','li',function(){
+	$('.adderss_list li').removeClass('active');
+	$(this).toggleClass('active');
+
+})
+$('.pay_btn').on('click',function(){
+    window.location.href="order_success.html?score="+score+"&total="+total;
+})
+</script>
+</body>
+</html>
+ 

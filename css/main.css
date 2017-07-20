@@ -1,0 +1,69 @@
+/*登录 注册 忘记密码*/
+.hr_237{height: 237px;}
+.hr_370{height: 370px;}
+/*********************************************/
+/*登录*/
+.user h1{padding-top: 65px;padding-bottom: 90px;}
+input{font-family: "Microsoft YaHei"}
+.content {overflow: hidden;padding-bottom: 200px;}
+.content .left-box {float: left;padding-left: 20px;}
+.content .right-box {width: 300px;float: right;}
+.content .right-box .title {font-size: 16px;color: #19191a;line-height: 16px;margin-bottom: 22px;margin-top: 50px;}
+.content .right-box .form .error-tips {background: url(../images/error.png) 10px no-repeat #fffff8;border: 1px solid #f10180;line-height: 30px;color: #f10180;width: 99%;padding-left: 40px;margin-bottom: 24px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: none;box-sizing: border-box;}
+.content .right-box .form .item {overflow: hidden;margin-bottom:24px;}
+.content .right-box .form .item.item1{margin-bottom: 17px;}
+.content .right-box .form .item.item2{margin-bottom: 29px;}
+.content .right-box .form .item .ui-input {width: 298px;+width: 97%;background: none;border: 1px solid #CFCFCF;height: 38px;line-height: 38px;+padding-top: 10px;text-indent: 6px;float: left;box-sizing: border-box;}
+.content .right-box .form .item .submit {background-color: #f10180;color: #fff;text-align: center;width: 100%;border: none;line-height: 40px;cursor: pointer;font-size: 14px;height: 40px;}
+.content .right-box .form .item .forget {float: left;}
+.content .right-box .form .item .register {float: right;font-size: 12px;font-weight: normal;}
+.content .right-box .form .item .register:hover,.content .right-box .form .item .forget:hover{color: #f10180;}
+.content .right-box .form .item.third_login{color: #999;font-size: 12px;}
+.content .right-box .form .item.third_login a{margin-left: 22px;}
+/***********注册***************/
+#register h1{padding-bottom: 80px;}
+#register .content .left-box{margin-top:10px;}
+#register .content .right-box .title{margin-top: 0;}
+#register .content .right-box .form .item .ui-input.code {width: 181px;+width: 160px;}
+#register .content .right-box .form .item.item3{margin-bottom: 18px;}
+#register .content .right-box .form .item.item4{margin-bottom: 26px;}
+#register .content .right-box .get-code {background-color: #f5f5f5;color: #666;text-align: center;float: left;margin-left: 7px;line-height: 38px;height: 38px;width: 108px;border: 1px solid #ccc;box-sizing: border-box;}  
+#register .content .right-box .form .item.agreement{background: url(../images/kuang.png) no-repeat left center;padding-left: 25px;margin-bottom: 35px;}
+#register .content .right-box .form .item.agreement.active{background: url(../images/red.png) no-repeat left center;}
+#register .content .right-box .form .item.agreement a:hover{color: #f10180;}
+#register .item.login a:hover{color: #f10180;}
+/*************忘记密码*************************/
+#password h1{margin-top: 60px;display: inline-block;padding-right: 32px;border-right: 1px solid #d5d5d5;}
+#password .title{padding-left: 27px;font-size: 26px;color: #000;}
+#password .settings {padding-top: 109px;width: 635px;margin-left: auto;margin-right: auto;}
+#password .settings .findPwd #process_con {margin: 0 auto;width: 632px;}
+#password .settings .findPwd #process_con .process {padding: 0 10px;margin: 0 auto;position: relative;border-bottom: 2px solid #ccc;counter-reset: step;}
+#password .settings .findPwd #process_con .process li {width: 23%;float: left;font-size: 18px;padding-bottom: 20px;text-align: center;margin:0 6px -2.5px;color: #000;}
+#password .settings .findPwd #process_con .process li.active i{display: inline-block;width: 28px;height:28px;background:url(../images/cir_red.png) no-repeat;background-size: contain;line-height: 28px;text-align: center;font-style: normal;color: #fff;margin-right: 12px;}
+#password .settings .findPwd #process_con .process li.active {color: #f10180;border-bottom: 2px solid #f10180;}
+#password .settings .findPwd #process_con .process li i{display: inline-block;width: 28px;height:28px;background:url(../images/cir_ccc.png) no-repeat;background-size: contain;line-height: 28px;text-align: center;font-style: normal;color: #fff;margin-right: 12px;}
+#password .settings .findPwd #process_con .process li.complete i{display: inline-block;width: 28px;height:28px;background:url(../images/cir.png) no-repeat;background-size: contain;line-height: 28px;text-align: center;font-style: normal;color: transparent;margin-right: 12px;}
+#password .settings .findPwd #process_con .process li.complete.active i{display: inline-block;width: 28px;height:28px;background:url(../images/complete.png) no-repeat;background-size: contain;line-height: 28px;text-align: center;font-style: normal;color: transparent;margin-right: 12px;}
+#password .settings .findPwd .findPwdForm{padding-top: 50px;margin: 0 auto;}
+#password .settings .findPwdForm .form-list{margin-bottom: 24px;margin-left: 145px;color: #999;}
+#password .settings .findPwdForm .form-list input {height: 38px;line-height: 38px;width: 300px;vertical-align: middle;color: #999;border: 1px solid #ddd;padding: 0;padding-left: 10px;box-sizing: border-box;}
+#password .settings .findPwdForm .form-list input.code {width: 181px;display: inline-block;float: left;}
+#password .settings .findPwdForm .form-list .img_code {vertical-align: bottom;margin-left: 7px;display: inline-block;float: left;}
+#password .settings .findPwdForm .form-list .error+strong {padding-left: 10px;color: #f10180;}
+#password .settings .findPwdForm .form-list strong {padding-left: 10px;color: #666;line-height: 20px;display: inline-block;height: 20px;font-weight: normal;}
+#password .settings .findPwdForm .form-list input.error{border-color: #f10180;}
+/************忘记密码1*****************/
+#password .settings .findPwdForm .form-list.form-list1,#password .settings .findPwdForm .form-list.form-list2{margin-bottom: 40px;}
+#password .settings .findPwdForm .form-list #btn{width: 115px;text-align: center;line-height: 37px;padding: 0;background: #f5f5f5;margin-left: 10px;display: inline-block;height: 37px;text-align: center;border: 1px solid #ccc;}
+#password .settings .findPwd #process_con #password  .findPwdForm .code{width: 180px;+width: 180px;display: inline-block;float: left;}
+#password .settings .findPwd #process_con #password  .findPwdForm .img_code{vertical-align: bottom;margin-left: 5px;display: inline-block;float: left;}
+#password .settings .findPwdForm .ext_submit {width: 300px;height: 40px;line-height: 40px;text-align: center;background-color:#f10180;color: #fff;border: none;cursor: pointer;}
+
+
+
+/************忘记密码3************************/
+#password .settings .findPwd .complete_tip{text-align: center;padding-top: 100px;font-size: 16px;color: #19191a}
+#password .settings .findPwd .complete_tip a{margin-left: 30px;color: #f10180;font-size: 16px;}
+/*忘记密码*/
+
+.findPwdForm .ext_submit, .findPwdForm .ext { margin-left: 145px;}

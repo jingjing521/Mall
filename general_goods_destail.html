@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的订单详情---普通商品</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <style>
+        .layui-field-box{padding:0;}
+		.site-table th, .site-table td{border:none;}
+		.adderss_list .site-table th{padding: 0;}
+		.adderss_list .site-table td{padding:20px;}
+		.layui-form-select dl dd.layui-this{background-color: #f10180;}
+    </style>
+</head>
+<body>
+<div class="head">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li><a href="register.html">注册</a> 
+	            </li> 
+	            <li><a href="login.html">登录</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix">
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"><em class=""></em>购物车</a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>			
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo">
+	            <img src="images/logo.png" alt="">	
+	        </a>		 	
+	        <div class="search fr">
+	            <div class="search_box clearfix" style="position: relative;">
+	                <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+	            	<ul name="" id="ul" style="">
+		            	<li value="" class="li active" style="line-height: 30px;">商品</li>
+		            	<li value="" class="li" style="line-height: 30px;">品牌</li>
+	                </ul>
+	                <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+	                <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+	            </div>
+	        </div>		 
+	    </div>
+	</div>
+</div>
+<!-- 导航 -->
+<div class="bgColor" id="nav">
+    <div class="inner comWidth">
+    	<ul class="clearfix">
+			<li class="active"><a href="index.html">首页</a></li>
+			<li><a href="preSale.html">预售商品</a></li>
+			<li><a href="women_index.html">女装</a></li>
+			<li><a href="women_index.html">男士</a></li>
+			<li><a href="women_index.html">箱包</a></li>
+			<li><a href="women_index.html">配饰</a></li>
+			<li><a href="personalCenter.html">我的皓歌</a></li>
+			<li class="nav-category"><a href="category_goods.html" class="main-nav-atag current"><img class="link-front-icon J-link-front-icon" src="images/category.png">分类</a></li>
+		</ul>
+    </div>
+</div>	
+<div class="personalCenter comWidth clearfix">
+    <div class="leftArea">
+   	    <ul class="expmenu">
+   	        <li class="sele">
+				<div class="header">
+					<span class="label"><a href="personalCenter.html">我的皓歌</a></span>
+					<span class="arrow down"></span>
+				</div>
+			</li>
+   	        <li class="selected">
+   	            <a href="my_order.html">
+					<div class="header">
+						<span class="label">我的订单</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+			    <a href="my_integration.html">
+					<div class="header">
+						<span class="label">我的积分</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="goods_collect.html">
+					<div class="header">
+						<span class="label">我的收藏</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="my_carts.html">
+					<div class="header">
+						<span class="label">我的购物车</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="address.html">
+					<div class="header">
+						<span class="label">地址管理</span>
+						<span class="arrow down"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<div class="header server">
+					<span class="label">客户服务</span>
+					<span class="arrow down"></span>
+				</div>
+				<ul class="menu" style="display: block;">
+					<li><a href="myMes.html">我的消息</a></li>
+					<li><a href="secure.html">安全中心</a></li>
+					<li><a href="help.html">帮助中心</a></li>
+					<li><a href="Feedback.html">意见反馈</a></li>
+				</ul>
+			</li>
+	    </ul>
+    </div>
+    <div class="rightArea" id="general_goods">
+        <div class="person_title pt"><span style="border:none;">皓歌服饰 > 我的订单 > 订单：<i class="order_sn">6521452145</i></span></div>
+        <div class="person_title" style="margin-top: 35px;"><span class="title_small">订单跟踪</span></div>
+        <div class="clearfix order_tracking">
+        	<ul class="leftArea details_step">
+        		<li><i>1</i>提交订单</li>
+        		<li><i>2</i>付款成功</li>
+        		<li><i>3</i>配送中</li>
+        		<li><i>4</i>已收货</li>
+        		<li class="complet"><i>5</i>已完成</li>
+        	</ul>
+
+        	<ul class="rightArea pay">
+        		<li style="background: #b3b3b3;"><a href="javascript:;" class="orderCancel">取消订单</a></li>
+        		<li><a href="order_success.html">立即支付</a></li>
+        	</ul>
+            <ul class="details_step">
+        		<li style="color: #999;border-bottom: none;margin-top: 20px;font-size: 14px;"><p style="line-height: 20px;">2015-02-08</p><p style="line-height: 20px;">13:52:14</p></li>
+        		<li style="color: #999;border-bottom: none;margin-top: 20px;font-size: 14px;"><p style="line-height: 20px;">2015-02-08</p><p style="line-height: 20px;">13:52:14</p></li>
+        		<li style="color: #999;border-bottom: none;margin-top: 20px;font-size: 14px;"><p style="line-height: 20px;">2015-02-08</p><p style="line-height: 20px;">13:52:14</p></li>
+        		<li style="color: #999;border-bottom: none;margin-top: 20px;font-size: 14px;"><p style="line-height: 20px;">2015-02-08</p><p style="line-height: 20px;">13:52:14</p></li>
+        	</ul>
+        </div>
+        <div style="margin-left: 104px;margin-top: 30px;">
+        	<p style="line-height: 30px;"><span style="color: #19191a;">物流公司：</span><span>XXX 物流</span></p>
+        	<p style="line-height: 30px;"><span style="color: #19191a;">货运单号：</span><span>8387644146</span></p>
+        	<p style="line-height: 30px;"><span style="color: #19191a;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        	<p style="line-height: 30px;"><span style="color: transparent;">物流跟踪：</span><span>2016-04-15 18:13:49 合肥包河开发区 的 何宏伟 已揽件</span></p>
+        </div>
+        <div class="person_title" style="margin-top: 35px;"><span class="title_small">基本信息</span></div>
+        <div class="order_msg clearfix">
+            <ul class="leftArea">
+            	<li>订单号：<span>3082016893001</span> </li>
+            	<li>下单时间：<span>2015-02-02 18:30:50</span></li>
+            	<li>收货人：<span>王刚</span><span>15234825210</span></li>
+            	<li>北京市 朝阳区 八里庄陈家林 甲1号  泰禾文化大厦B座8层</li>
+            	<li class="payment_mode">支付方式：<span>支付宝支付</span></li>
+            </ul>
+            <div class="rightArea">
+              <h6>价格清单</h6>
+              <p>商品总额：<span style="margin-left: 10px;">￥<em>190.00</em></span></p>
+              <p class="fare">包含运费：<span style="margin-left: 10px;">+￥<em>5.00</em></span></p>
+              <p class="payable">应付金额：<span>￥<em>195.00</em></span></p>
+            	
+            </div>	
+        </div>
+        <div class="person_title" style="margin-top: 35px;"><span class="title_small">商品信息</span></div>
+        <div class="layui-field-box">
+			<table class="site-table">
+				<thead>
+					<tr>
+						<th style="text-align: left;padding-left: 20px;">商品信息</th>
+						<th>单价</th>
+						<th style="width: 250px;">数量</th>
+						<th>合计</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr>
+						<td class="clearfix td">
+	                        <a href="">
+			   	    			<div class="carts-photo fl" style="width: 100px;height: 100px;">
+						            <img class="" src="images/s1.jpg" style="display: inline;">
+						        </div>
+						        <div class="carts-info fl">
+						            <h6 class="brand-name" style="margin-left: 25px;">T恤 圆领原点浮雕面料加衬下摆格子拼接常规款宽松A字打底T恤上衣</h6>
+						            <p class="price" style="text-align: left;margin-left: 25px;"><span>咖啡色</span><span style="margin-left: 20px;">XXL</span></p>
+						        </div>
+			   	    		</a>
+						</td>
+						<td style="color: #f10180;">￥<em>49.00</em></td>
+						<td style="width: 250px;"><a href="#" class="btn1" style="color: #f10180;">2</a></td>
+						<td>￥<em>49.00</em></td>
+					</tr> 
+				</tbody>
+			</table>
+		</div>
+    </div>
+</div>
+<div id= "com-foot">	
+    <div class="inner">
+        <div class="flist">			
+            <h4>关于我们</h4>			
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>	
+        <div class="flist">			
+            <h4>友情链接</h4>			
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>		
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>		
+        </div>		
+        <div class="flist">			
+            <h4>新手指南</h4>			
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>			
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>		
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>		
+        <div class="flist service">						
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>		
+        <div class="flist last" style="float:left;">
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>	
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="plugins/layui/layui.js"></script>
+<script type="text/javascript" src="myLib/page.js"></script>
+<script src="js/user.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){					   
+	/* 滑动/展开 */
+	$("ul.expmenu li > div.header").click(function(){									
+		var arrow = $(this).find("span.arrow");
+		if(arrow.hasClass("up")){
+			arrow.removeClass("up");
+			arrow.addClass("down");
+		}else if(arrow.hasClass("down")){
+			arrow.removeClass("down");
+			arrow.addClass("up");
+		}
+		$(this).parent().find("ul.menu").slideToggle();
+	});	
+});
+</script>
+</body>
+</html>

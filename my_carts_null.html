@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>皓歌服饰---购物车</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/layui.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/personalCenter.css">
+	<style>
+		.layui-field-box{padding:0;}
+		.site-table th, .site-table td{border:none;}
+		.adderss_list .site-table th{padding: 0;}
+		.adderss_list .site-table td{padding:20px;}
+		.layui-form-select dl dd.layui-this{background-color: #f10180;}
+.spinner-sprite, .spinner .decrease, .spinner .decrease[disabled], .spinner .increase, .spinner .value, .spinner .value.passive {
+    background: url('images/spinner.png') no-repeat
+}
+.spinner {
+    height: 25px;
+    width: 71px;
+    overflow: hidden;
+    *zoom:1;
+    -webkit-box-shadow: 0 3px 3px -4px #aaa;
+    -moz-box-shadow: 0 3px 3px -4px #aaa;
+    box-shadow: 0 3px 3px -4px #aaa;
+    margin-left: 30px;
+}
+.spinner button, .spinner .value {
+    text-align: center;
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 25px;
+    margin: 0
+}
+.spinner button {
+    border: none;
+    width: 23px;
+    color: #e5312a;
+    font: 22px Arial bold;
+    padding: 0;
+    outline: none
+}
+.spinner .decrease {
+    background-position: 0 -50px;
+    cursor: pointer;
+    text-indent: -10000px
+}
+.spinner .decrease[disabled] {
+    background-position: 0 -75px;
+    cursor: default
+}
+.spinner .increase {
+    background-position: 0 0;
+    cursor: pointer;
+    text-indent: -10000px
+}
+.spinner .value {
+    background-position: 0 -100px;
+    width: 24px;
+    height: 27px;
+    border: none;
+    font-family: Arial;
+    color: #ffffff;
+    padding: 0px
+}
+.spinner .value.passive {
+    background-position: 0 -25px;
+    color: #919191
+}
+.spinner .error, .spinner .invalid {
+    background: #aa0000
+}
+ 
+ 
+.spinnerExample{margin:10px 0;}
+ .goods_cart .wrap {
+    width: 1200px;
+    height: 390px;
+    margin: 0 auto;
+    position: relative;
+}
+.goods_cart .wrap .cart-empty {
+    padding: 130px 0;
+    min-height: 83px;
+}
+.goods_cart .wrap .cart-empty dt {
+    width: 500px;
+    float: left;
+}
+.goods_cart .wrap .cart-empty dt .mall-cart-empty-icon {
+    width: 77px;
+    height: 83px;
+    float: right;
+    background: url('images/img_cart.png') no-repeat 0 -109px;
+}
+ .goods_cart .wrap .cart-empty dd {
+    overflow: hidden;
+    padding: 15px 30px 0;
+}
+ .goods_cart .wrap .cart-empty dd p {
+    line-height: 30px;
+    color: #999;
+    font-size: 14px;
+}
+.goods_cart .wrap .cart-empty dd p a {
+    color: #f10180;
+}
+	</style>
+</head>
+<body>
+<!-- 顶部 -->
+<div class="head" id="order">
+	<div id="com-topbar"> 
+	    <div class="inner comWidth clearfix"> 
+	        <ul class="leftArea clearfix">
+	            <li class="user_name"><a href="register.html">dreaming1024</a> 
+	            </li> 
+	            <li><a href="login.html">退出</a> 
+	            </li>
+	        </ul>
+	        <ul class="rightArea clearfix"> 
+	            <li class="drop">		
+	              	<a href="index.html" target="_blank"><em class="collect"></em>首页</a>
+	            </li>
+	            <li class="drop cart-wrapper">				
+	                <a target="_blank" href="my_carts.html" class="my-cart"> <em class="cart"></em>购物车<span>（<i class="cart_num">10</i>）</span></a>		
+	            </li>			
+	            <li>				
+	                <a href="goods_collect.html" target="_blank"><em class="order"></em>收藏夹</a>
+	            </li> 
+	            <li class="drop">				
+	                <a target="_blank" href="help.html">帮助中心<em class="arrow"></em></a>
+	            </li> 
+	            <li>				
+	                <a href="store_certification.html" target="_blank" class="last">商家入驻</a>		
+	            </li> 
+	        </ul> 
+	    </div>
+	</div>
+	<div id="com-search">	
+	    <div class="inner comWidth clearfix">		
+	        <a href="index.html" class="logo" style="border-right: 1px solid #ccc;padding-right: 25px;">
+	            <img src="images/logo.png" alt="">	
+	        </a>
+            <span class="title" style="padding-left: 30px;font-size: 26px;color: #000;    line-height: 150px;">购物车</span>
+            <div class="search fr">
+                <div class="search_box clearfix" style="position: relative;">
+                    <div class="option_s fl" style="display: inline-block;padding:0 20px;background:url(images/arrow.png) no-repeat right center;line-height: 40px;cursor: pointer;">商品</div>
+                    <ul name="" id="ul" style="">
+                        <li value="" class="li active" style="line-height: 30px;">商品</li>
+                        <li value="" class="li" style="line-height: 30px;">品牌</li>
+                    </ul>
+                    <input type="text" placeholder="请输入关键字进行搜索" class="fl">
+                    <button class="fl" id="search_btn"><a href="javascript:void" style="color: #fff;font-size: 16px;">搜索</a></button>
+                </div>
+            </div>  
+	    </div>
+	</div>
+</div>
+<!-- 支付步骤 -->
+<div class="comWidth clearfix" id="order_step">
+	<ul class="order_step" style="margin:20px 200px;">
+		<li class="cart active"><a href="">查看购物车</a></li>
+		<li><a href="">确认订单</a></li>
+		<li><a href="">支付成功</a></li>
+		<li><a href="">交易完成</a></li>
+	</ul>	
+</div>
+<div class="comWidth" id="carts">
+    <div class="goods_cart">
+        <div class="wrap">
+            <dl class="cart-empty">
+                <dt>
+                    <i class="mall-cart-empty-icon"></i></dt>
+                <dd>
+                    <p>购物车空空的哦~，去看看心仪的商品吧~</p>
+                    <p><a href="index.html">去购物&gt;</a></p>
+                </dd>
+            </dl>
+        </div>        
+    </div>
+</div>
+ 
+<div id= "com-foot">    
+    <div class="inner">
+        <div class="flist">         
+            <h4>关于我们</h4>           
+            <div><a href="javascript:void" target="_blank">公司简介</a></div>
+            <div><a href="javascript:void" target="_blank">联系我们</a></div>
+        </div>  
+        <div class="flist">         
+            <h4>友情链接</h4>           
+            <div><a href="javascript:void" target="_blank">天猫商城</a>
+            </div>      
+            <div><a href="javascript:void" target="_blank">苏宁易购</a>
+            </div>      
+        </div>      
+        <div class="flist">         
+            <h4>新手指南</h4>           
+            <div><a href="javascript:void" target="_blank">账户注册</a>
+            </div>          
+            <div><a href="javascript:void" target="_blank">购物流程</a>
+            </div>      
+        </div>
+        <div class="flist">         
+            <h4>支付方式</h4>           
+            <div><a href="javascript:void" target="_blank">在线支付</a>
+            </div>       
+        </div>
+        <div class="flist">         
+            <h4>售后服务</h4>           
+            <div><a href="javascript:void" target="_blank">退换货政策</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退换货流程</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款说明</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">退款帮助</a>
+            </div>        
+        </div>
+        <div class="flist">         
+            <h4>帮助</h4>           
+            <div><a href="javascript:void" target="_blank">在线客服</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">找回密码</a>
+            </div>
+            <div><a href="javascript:void" target="_blank">隐私说明</a>
+            </div>      
+        </div>      
+        <div class="flist service">                     
+            <img class="qrcode" src="images/code11.png" alt="">
+            <h4 style="color: #666;font-size: 15px;">扫描关注微商城</h4>
+        </div>      
+        <div class="flist last" style="float:left;">
+            <img class="qrcode" src="images/code11.png">
+            <h4 style="color: #666;font-size: 15px;">手机APP下载</h4>   
+        </div>
+    </div>
+    <div class="record">   
+        Copyright 2007-2108 xxx.com All rights Reserved 京ICP备00001号 公安网安备110112119号  出版物经营许可证新出发京批第直110120号&nbsp;
+    </div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.spinner.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+$('.spinnerExample').spinner({});
+ 
+ 
+$('.adderss_list').on('click','li',function(){
+	$('.adderss_list li').removeClass('active');
+	$(this).addClass('active');
+});
+$('#carts').on('click','.store',function(){
+	$(this).toggleClass('active');
+	if($(this).hasClass('active')){
+		// $().nextAll().find('.first').addClass('active')
+	}
+})
+$('#carts').on('click','.first',function(){
+	$(this).toggleClass('active');
+	if($(this).hasClass('active')){
+		$(this).nextAll().find('.first').addClass('active')
+	}
+})
+
+// 单个
+ // 全选
+    var num = 0;
+    $('#J_OrderList').on('click','.checkAll',function(){
+        num = $(this).closest('.shop_info').next('.order_content').find('.ckbox').length;
+    
+        $(this).toggleClass('cb_checked'); 
+        if( $(this).hasClass('cb_checked') ){
+            $(this).closest('.shop_info').next('.order_content').find('.ckbox').addClass('cb_checked')
+        }else{
+             $(this).closest('.shop_info').next('.order_content').find('.ckbox').removeClass('cb_checked')
+        }
+
+    });
+    
+    // 处理单个
+    
+    $('#J_OrderList').on('click','.ckbox',function(){
+        
+        $(this).toggleClass('cb_checked');
+        var n = $('.ckbox.cb_checked').length;
+        var num = $(this).closest('.order_content').find('.item-content').length;
+        if( n == num ){
+            $(this).closest('.item-content').parent().prev('.shop_info').find('.checkAll').addClass('cb_checked')
+        }else if( n < num ){
+             $(this).closest('.item-content').parent().prev('.shop_info').find('.checkAll').removeClass('cb_checked')
+        }
+
+    });
+
+// 删除
+function del(r){
+    $(r).parent().parent().parent().remove();
+    console.log($(r).closest('li.td').parent().parent().find('ul.item-content').length)
+}
+</script>
+
+</body>
+</html>

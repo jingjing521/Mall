@@ -1,0 +1,78 @@
+#store_stails p.price .date {
+    background: url(../images/bg11.png) no-repeat center center;
+    font-size: 12px;
+    color: #fff;
+    background-size: 100% 100%;
+    padding: 2px 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#store_stails .store_info .store_img{width: 194px;height: 194px;overflow: hidden;}
+#store_stails .store_info .store_img img{width: 100%;}
+#store_stails .store_tit{width: 100%;height: 525px;background-size: 100% 100%;position: relative;background-repeat: no-repeat;}
+#store_stails .store_tit .tip{position: absolute;left: 0;top: 0;width:100%;height: 100%;background: #000;opacity:0.5;filter:alpha(opacity=50);}
+#store_stails .store_tit .ad_div{height:100%;position: relative;}
+#store_stails .store_tit .ad{position: absolute;top: 50%;left: 0%;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);}
+#store_stails .store_tit .ad li{float: left;margin-right: 15px;width: 315px;height: 220px;}
+#store_stails .store_tit .ad li img{width: 100%;overflow: hidden;}
+#store_stails .store_tit .play_btn{position: absolute;top: 36%;right: 20%;width:80px;}
+#store_stails .store_info{position: absolute;bottom: -30%;z-index: 999;}
+#store_stails .store_info h3{font-size: 24px;color: #000;padding-left: 30px;background: url(../images/st.png) no-repeat left center;font-weight: normal;line-height: 40px;color: #ffffff;}
+#store_stails .store_info p.price em {color: #f10180;font-size: 32px;}
+.custom_service {position: absolute;right: 10px;top: 80px;}
+.custom_service span {padding: 0 5px;border: 1px solid #ccc;display: inline-block;height: 30px;line-height: 30px;}
+.share li.share_icon {width: 80px;background: url(../images/share_icon.png) no-repeat left center;padding-left: 26px;position: relative;cursor: pointer;line-height: 20px;}
+.share li.collect_icon {background: url(../images/collect_icon.png) no-repeat left center;padding-left: 22px;}
+.share .share_icon .share_list {position: absolute;left: 0;top: 20px;display: none;}
+.bdshare-button-style1-16 {zoom: 1;}
+.share_list {width: 150px;}
+.sort_opt{height: 40px;background-color: #ebebeb;}
+.sort_opt span{display: inline-block;line-height: 40px;padding: 0 20px;}
+.sort_opt span i{display: inline-block;width:10px;height: 10px;background:url(../images/icon_top.png) no-repeat;margin-left: 10px;}
+#goods_list .floor-body{border: none;padding: 0;}
+#goods_list .limits{border-bottom: 1px solid #ccc;padding-bottom: 30px;}
+#goods_list .brand-photo img {width: 100%;}
+#goods_list .brand-photo{width: 280px;height: 280px;}
+#goods_list .brand-photo{width: 100%;height: 100%;}
+#goods_list .brand-info{text-align: left;padding: 0;margin-top: 10px;}
+#goods_list .brand-info .brand-name{height: 55px;white-space:normal;color: #000;}
+#goods_list .price{color: #f10180;font-size: 18px;}
+#goods_list .price i{font-style: normal;}
+
+.m-cat-wrap {position: relative;z-index: 5;margin-top: 200px;}
+.m-cat-oper {clear: both;position: relative;z-index: 1; margin-bottom: 20px;_zoom: 1;}
+.oper-more-cnt {overflow: hidden;width: 100%;background-color: #fff;border: 1px solid #dfdfdf;}
+.cat-oper-sec {position: relative;overflow: hidden;border-top: 1px dotted #ccc;}
+.f-clearfix {zoom: 1;}
+.oper-sec-tit {float: left; width: 80px;_width: 74px;padding-left: 20px;font-size: 12px;color: #000;height: 100%;line-height: 85px;background-color: #f5f5f5;}
+.multi-option-item {display: inline-block;position: relative;margin:30px 32px 1px 10px;padding: 5px;border: 1px solid #fff;text-align: center;}
+.multi-option-item.active{color: #f10180;border:1px solid #f10180;}
+
+.pages {margin:40px auto 0 auto;}
+.pages #Pagination {float: left;overflow: hidden;}
+.pages #Pagination .pagination {height: 28px;text-align: right;font-family: \u5b8b\u4f53,Arial;}
+.pages #Pagination .pagination a,
+.pages #Pagination .pagination span {float: left;display: inline-block;width: 34px;height: 28px;line-height: 28px;text-align: center;border: 1px solid #e6e6e6;border-right: none;color: #666666;font-family: \u5b8b\u4f53,Arial;font-size: 14px;cursor: pointer;margin-right: 10px;}
+.pages #Pagination .pagination .current {background: #f10180;color: #fff;}
+.pages #Pagination .pagination .prev,
+.pages #Pagination .pagination .next {float: left;padding: 11px 13px;border: 1px solid #e6e6e6;background: #f6f6f6;color: #666666;cursor: pointer;}
+.pages #Pagination .pagination .prev i,
+.pages #Pagination .pagination .next i {display: inline-block;width: 4px;height: 11px;margin-right: 5px;background: url(../images/icon.fw.png) no-repeat;}
+.pages #Pagination .pagination .prev {border-right: none;}
+.pages #Pagination .pagination .prev i {background-position: -144px -1px;*background-position: -144px -4px;}
+.pages #Pagination .pagination .next i {background-position: -156px -1px;*background-position: -156px -4px;}
+.pages #Pagination .pagination .pagination-break {padding: 11px 5px;border: none;margin-left: 10px;background: none;cursor: default;}
+.pages .searchPage {float: left;}
+.pages .searchPage .page-sum {padding: 11px 13px;color: #19191a;font-family: \u5b8b\u4f53,Arial;font-size: 16px;}
+.pages .searchPage .page-go {padding: 8px 0;color: #19191a;font-family: \u5b8b\u4f53,Arial;font-size: 14px;padding: 10px 0\9;*padding: 6px 0;}
+.pages .searchPage .page-go input {width: 40px;height: 28px;margin: 0 5px;padding-left: 5px;border: 1px solid #e4e4e4;}
+.pages .searchPage .page-btn{display: inline-block;width: 60px;height: 28px;line-height: 28px;text-align: center;margin-left: 20px;padding: 2px 5px;background: #f10180;color: #ffffff;font-family: Arial, 'Microsoft YaHei';font-size: 16px;text-decoration: none;}
+
+body{position: relative;}
+.fixed{position: fixed;left: 0;bottom: 0;width: 100%;z-index: 999;}
+#time{width: 100%;height: 80px;line-height: 80px;font-size: 22px;color: #fff;background: url(../images/foot_bg.png) no-repeat;background-size: 100% 100%;}
+#time .store_show{margin-right: 57px;}
+#time .store_show em.discount_num{color: #f10180;padding:0 5px;}
+#time .comWidth .collect_brand{font-size: 14px;background:url(../images/fff_collect.png) no-repeat left center;padding-left: 24px;cursor: pointer;}
+#time #clock_foot{background:url(../images/fff_time.png) no-repeat left center;padding-left: 35px;}
+#time #clock_foot span{color: #f10180;}
